@@ -7,7 +7,7 @@ using std::endl;
 
 int coords_to_index(int row, int col, int val, const int mrow)
 {
-	int idx = (row*mrow) + col;
+	int idx = ((row-1)*mrow) + col;
 	return idx;
 }
 
@@ -18,7 +18,7 @@ int main()
 	int mcol;	//Max kolumn
 	cin >> mrow;
 	cin >> mcol;
-	int idx_max;	//Iloœæ indexów
+	int idx_max;	//Ilosc indexow
 	idx_max = mrow * mcol;
 	//cout << idx_max << endl;
 
@@ -29,7 +29,7 @@ int main()
 		a[i] = 0;
 	}
 
-	for (int i = 1; i <= idx_max; i++) //wyœwietlane wyzerowanej tablicy
+	for (int i = 1; i <= idx_max; i++) //wyswietlanie wyzerowanej tablicy
 	{
 		if (i % mcol == 0)
 			cout << a[i] << "\n";
@@ -39,14 +39,14 @@ int main()
 	cout << endl;
 
 	int** aa = new int*[mrow];
-	for (int i = 0; i < mrow; i++) // przypisanie przesuniêæ o podana przez u¿ytkownika liczbe kolumn
+	for (int i = 0; i < mrow; i++) // przypisanie przesuniecia o podana przez uzytkownika liczbe kolumn
 	{
 		aa[i] = a + i * mcol;
 	}
 
-	int row; //wspo³rzêdna wiersza 
-	int col;//wspo³rzêdna kolumny
-	int val; //wartoœæ
+	int row = 0; //wspolrzedna wiersza 
+	int col = 0; //wspolrzedna kolumny
+	int val = 0; //wartosc
 
 	for (int i = 0; i < idx_max; i++)
 	{
@@ -54,9 +54,28 @@ int main()
 		{
 			if (row <= mrow && col <= mcol)
 			{
-				cout << "Podaj wspolrzedna x oraz y elementu oraz jego wartosc:" << endl;
-				cin >> row >> col >> val;
-				coords_to_index(row, col, val, mrow);
+				cout << "Podaj wspolrzedna x: ";
+				cin >> row;
+				if (row < 1 || row > mrow) { break; } // kontrola poprawnosci
+				cout << "Podaj wspolrzedna y: ";
+				cin >> col;
+				if (col < 1 || col > mcol) { break; } // kontrola poprawnosci
+				cout << "Podaj wartosc: ";
+				cin >> val;
+
+				int pomoc = 0;
+				pomoc = coords_to_index(row, col, val, mrow);
+
+				a[pomoc] = val;
+
+				for (int i = 1; i <= idx_max; i++) //wyswietlanie tablicy
+				{
+					if (i % mcol == 0)
+						cout << a[i] << "\n";
+					else
+						cout << a[i] << " ";
+				}
+				cout << endl;
 			}
 			else
 			{
