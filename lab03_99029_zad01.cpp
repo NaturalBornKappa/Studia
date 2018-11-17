@@ -18,9 +18,6 @@ public:
 	void add_edge(int n1, int n2) {};
 	void add_edge(Edge* n) {};
 
-	void set_to() {};
-	void set_from() {};
-
 	void print_edges() {};
 
 	int get_vertices_number() { return 0; };
