@@ -82,7 +82,10 @@ Edge::Edge(Vertex* n1, Vertex* n2) {
 	;
 }
 
+// Metody
 
+
+// Main
 int main()
 {
 
