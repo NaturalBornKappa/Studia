@@ -1,4 +1,4 @@
 Repozytorium, w którym wrzucam kody programów z labek.
 
-Konwencja nazewnictwa: LabID_Nr.Albumu_ZadID.
-                   eg. Lab00_99029_zad01
+Konwencja nazewnictwa: labID_Nr.Albumu_zadID_STATUS
+                   eg. lab00_99029_zad01_DONE
