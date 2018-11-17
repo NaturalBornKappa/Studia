@@ -39,7 +39,7 @@ public:
 	Vertex();
 	Vertex(int n);
 
-	int set_weight(int n) { return 0; };
+	void set_weight(int n) {};
 	int vertex_number;
 
 private:
