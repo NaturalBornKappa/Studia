@@ -29,7 +29,7 @@ public:
 	int get_edges_number() { return 0; };
 
 	void remove_edge(int n) {};
-	void remove_vertex(int vertex_ideks) {};
+	void remove_vertex(int vertex_indeks) {};
 
 private:
 	int vertex_indeks;  //index wierzcholka
@@ -97,7 +97,7 @@ int main()
 	{
 		g.get_vertex(0)->set_weight(2); //get_vertex przyjmuje
 										//za parametr indeks wierzcholka
-		g.add_edge(0, 1); //indeksy wierzcholków tworzacych krawedz
+		g.add_edge(0, 1); //indeksy wierzcholkÃ³w tworzacych krawedz
 		g.add_edge(0, 3);
 		Vertex* v1 = g.get_vertex(1); //indeks wierzcholka
 		Vertex* v2 = g.get_vertex(2);
