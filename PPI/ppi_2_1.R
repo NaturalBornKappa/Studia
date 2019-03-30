@@ -1,0 +1,13 @@
+a=matrix(1:9,3,3)
+cat(a)
+cat(a[1,])
+cat(a[,1])
+cat(a[,2])
+cat(a[,3])
+a
+t(a)
+a
+a=t(a)
+a
+b=matrix(c(1,1,1,3,3,3,5,5,5),3,3)
+b
