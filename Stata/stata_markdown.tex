@@ -1,0 +1,703 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Stata},
+            pdfauthor={Jakub Bauer},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Stata}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Jakub Bauer}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+    \date{}
+    \predate{}\postdate{}
+  
+
+\begin{document}
+\maketitle
+
+\subsubsection{1. Ktora Marka wystepuje najczesciej w zbiorze danych
+auta2012?}\label{ktora-marka-wystepuje-najczesciej-w-zbiorze-danych-auta2012}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba }\OperatorTok{==}\StringTok{ }\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   Marka      liczba
+##   <fct>       <int>
+## 1 Volkswagen  22826
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{2. Sposrod aut marki Toyota, kt?ry model wystepuje
+najczesciej.}\label{sposrod-aut-marki-toyota-ktry-model-wystepuje-najczesciej.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Marka }\OperatorTok{==}\StringTok{ "Toyota"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Model) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba }\OperatorTok{==}\StringTok{ }\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   Model liczba
+##   <fct>  <int>
+## 1 Yaris   1552
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{3. Sprawdz ile jest aut z silnikiem diesla
+wyprodukowanych w 2007
+roku?}\label{sprawdz-ile-jest-aut-z-silnikiem-diesla-wyprodukowanych-w-2007-roku}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Rok.produkcji, Rodzaj.paliwa) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji }\OperatorTok{==}\StringTok{ }\DecValTok{2007}\NormalTok{, }
+         \KeywordTok{grepl}\NormalTok{(}\StringTok{'diesel'}\NormalTok{, Rodzaj.paliwa)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Rok.produkcji, Rodzaj.paliwa) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 3
+## # Groups:   Rok.produkcji [1]
+##   Rok.produkcji Rodzaj.paliwa          liczba
+##           <dbl> <fct>                   <int>
+## 1          2007 olej napedowy (diesel)  11621
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{4.(1) Jakiego koloru auta maja najmniejszy medianowy
+przebieg?}\label{jakiego-koloru-auta-maja-najmniejszy-medianowy-przebieg}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Kolor, Przebieg.w.km)}\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Kolor, Przebieg.w.km)}\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{mediana =} \KeywordTok{median}\NormalTok{(Przebieg.w.km, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{))}\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(mediana)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 41,809 x 3
+## # Groups:   Kolor [37]
+##    Kolor            Przebieg.w.km mediana
+##    <fct>                    <dbl>   <dbl>
+##  1 ""                           1       1
+##  2 bezowy                       1       1
+##  3 bezowy-metallic              1       1
+##  4 bialy                        1       1
+##  5 bialy-metallic               1       1
+##  6 bordowy-metallic             1       1
+##  7 brezowy                      1       1
+##  8 brezowy-metallic             1       1
+##  9 czarny                       1       1
+## 10 czarny-metallic              1       1
+## # ... with 41,799 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{4.(2) Gdy ograniczyc sie tylko do aut wyprodukowanych w
+2007, ktora Marka wystepuje najczesciej w zbiorze danych
+auta2012?}\label{gdy-ograniczyc-sie-tylko-do-aut-wyprodukowanych-w-2007-ktora-marka-wystepuje-najczesciej-w-zbiorze-danych-auta2012}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Rok.produkcji, Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji }\OperatorTok{==}\StringTok{ }\DecValTok{2007}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Rok.produkcji, Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba }\OperatorTok{==}\StringTok{ }\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 3
+## # Groups:   Rok.produkcji [1]
+##   Rok.produkcji Marka      liczba
+##           <dbl> <fct>       <int>
+## 1          2007 Volkswagen   1679
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{5. Sposrod aut marki Toyota, kt?ry model najbardziej
+stracil na cenie pomiedzy rokiem produkcji 2007 a
+2008.}\label{sposrod-aut-marki-toyota-ktry-model-najbardziej-stracil-na-cenie-pomiedzy-rokiem-produkcji-2007-a-2008.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Marka, Model, Cena, Rok.produkcji) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji }\OperatorTok{>=}\StringTok{ }\DecValTok{2007}\NormalTok{, Rok.produkcji }\OperatorTok{<=}\StringTok{ }\DecValTok{2008}\NormalTok{, Marka }\OperatorTok{==}\StringTok{ "Toyota"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Model, Rok.produkcji) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{moja.cena =} \KeywordTok{mean}\NormalTok{(Cena)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{roznica =}\NormalTok{ moja.cena }\OperatorTok{-}\StringTok{ }\KeywordTok{lag}\NormalTok{(moja.cena, }\DecValTok{1}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Rok.produkcji, Model, roznica) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(roznica)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 43 x 3
+## # Groups:   Model [25]
+##    Rok.produkcji Model          roznica
+##            <dbl> <fct>            <dbl>
+##  1          2008 Prius         -582726.
+##  2          2008 Tundra        -106775 
+##  3          2008 Hiace          -30000 
+##  4          2008 Matrix         -20000 
+##  5          2008 RAV-4           -9997.
+##  6          2008 Yaris           -6291.
+##  7          2008 Aygo             -629.
+##  8          2008 Corolla          -341.
+##  9          2008 Avalon           5567.
+## 10          2008 Corolla Verso    6342.
+## # ... with 33 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{6. Sposrod aut z silnikiem diesla wyprodukowanych w 2007
+roku ktora marka jest
+najdrozsza?}\label{sposrod-aut-z-silnikiem-diesla-wyprodukowanych-w-2007-roku-ktora-marka-jest-najdrozsza}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Marka, Model, Cena.w.PLN, Rodzaj.paliwa, Rok.produkcji) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji}\OperatorTok{==}\DecValTok{2007}\NormalTok{, Rodzaj.paliwa}\OperatorTok{==}\StringTok{"olej napedowy (diesel)"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka, Model, Cena.w.PLN) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(Cena.w.PLN))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 11,621 x 5
+## # Groups:   Marka, Model, Cena.w.PLN [7,511]
+##    Marka         Model   Cena.w.PLN Rodzaj.paliwa          Rok.produkcji
+##    <fct>         <fct>        <dbl> <fct>                          <dbl>
+##  1 Volvo         inny       505745. olej napedowy (diesel)          2007
+##  2 Mercedes-Benz G 320      287092  olej napedowy (diesel)          2007
+##  3 Mercedes-Benz S 320      259900  olej napedowy (diesel)          2007
+##  4 Mercedes-Benz G 320      256174. olej napedowy (diesel)          2007
+##  5 Mercedes-Benz GL 420     250000  olej napedowy (diesel)          2007
+##  6 Mercedes-Benz S 320      235000  olej napedowy (diesel)          2007
+##  7 Mercedes-Benz CLS 320    235000  olej napedowy (diesel)          2007
+##  8 Mercedes-Benz GL 420     229900  olej napedowy (diesel)          2007
+##  9 Mercedes-Benz S 320      229900  olej napedowy (diesel)          2007
+## 10 Mercedes-Benz S 320      229000  olej napedowy (diesel)          2007
+## # ... with 11,611 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{7. Ile jest aut z
+klimatyzacja?}\label{ile-jest-aut-z-klimatyzacja}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Wyposazenie.dodatkowe) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Wyposazenie.dodatkowe}\OperatorTok{==}\StringTok{"klimatyzacja"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   liczba
+## 1    117
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{8. Gdy ograniczyc sie tylko do aut z silnikiem ponad 100
+KM, ktora Marka wystepuje najczesciej w zbiorze danych
+auta2012?}\label{gdy-ograniczyc-sie-tylko-do-aut-z-silnikiem-ponad-100-km-ktora-marka-wystepuje-najczesciej-w-zbiorze-danych-auta2012}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(KM,Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(KM}\OperatorTok{>}\DecValTok{100}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 82 x 2
+##    Marka         liczba
+##    <fct>          <int>
+##  1 Volkswagen     13317
+##  2 Audi           11223
+##  3 Ford            9174
+##  4 BMW             8934
+##  5 Renault         8713
+##  6 Opel            8245
+##  7 Mercedes-Benz   7827
+##  8 Skoda           4347
+##  9 Peugeot         4116
+## 10 Toyota          4028
+## # ... with 72 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{9. Sposrod aut marki Toyota, ktory model ma najwieksza
+ro?nice cen gdy porownac silniki benzynowe a
+diesel?}\label{sposrod-aut-marki-toyota-ktory-model-ma-najwieksza-ronice-cen-gdy-porownac-silniki-benzynowe-a-diesel}
+
+W tym zadaniu niestety potrafie wyfiltrowa? sobie tylko Toyoty w
+diesel'u i w benzynie. Nie mam pomyslu jak zrobic funkcie ktra by brala
+max cene dal jednego radzju paliwa i drugiego dla danego modelu i
+por?wnywla do siebie.
+
+\subsection{Nie wyswietlam co robi ten kod, poniewaz jest tutaj kilka
+tysiecy
+rekodrow.}\label{nie-wyswietlam-co-robi-ten-kod-poniewaz-jest-tutaj-kilka-tysiecy-rekodrow.}
+
+\subsubsection{10. Sposrod aut z silnikiem diesla wyprodukowanych w 2007
+roku ktora marka jest
+najtansza?}\label{sposrod-aut-z-silnikiem-diesla-wyprodukowanych-w-2007-roku-ktora-marka-jest-najtansza}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Marka, Model, Cena.w.PLN, Rodzaj.paliwa, Rok.produkcji) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji}\OperatorTok{==}\DecValTok{2007}\NormalTok{, Rodzaj.paliwa}\OperatorTok{==}\StringTok{"olej napedowy (diesel)"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka, Model, Cena.w.PLN) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(Cena.w.PLN)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 11,621 x 5
+## # Groups:   Marka, Model, Cena.w.PLN [7,511]
+##    Marka      Model    Cena.w.PLN Rodzaj.paliwa          Rok.produkcji
+##    <fct>      <fct>         <dbl> <fct>                          <dbl>
+##  1 Skoda      Octavia         562 olej napedowy (diesel)          2007
+##  2 Skoda      Octavia         600 olej napedowy (diesel)          2007
+##  3 Seat       Leon            700 olej napedowy (diesel)          2007
+##  4 Honda      Accord          999 olej napedowy (diesel)          2007
+##  5 Volkswagen Eos             999 olej napedowy (diesel)          2007
+##  6 Nissan     Navara         1100 olej napedowy (diesel)          2007
+##  7 Citroen    Berlingo       1350 olej napedowy (diesel)          2007
+##  8 Peugeot    Partner        1500 olej napedowy (diesel)          2007
+##  9 Citroen    Berlingo       1550 olej napedowy (diesel)          2007
+## 10 Ford       C-MAX          1600 olej napedowy (diesel)          2007
+## # ... with 11,611 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{11. W jakiej marce klimatyzacja jest najczesciej
+obecna?}\label{w-jakiej-marce-klimatyzacja-jest-najczesciej-obecna}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Marka, Wyposazenie.dodatkowe) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Wyposazenie.dodatkowe}\OperatorTok{==}\StringTok{"klimatyzacja"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba}\OperatorTok{==}\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   Marka   liczba
+##   <fct>    <int>
+## 1 Renault     33
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{12. Gdy ograniczyc sie tylko do aut o cenie ponad 50 000
+PLN, ktora Marka wystepuje najczesciej w zbiorze danych
+auta2012?}\label{gdy-ograniczyc-sie-tylko-do-aut-o-cenie-ponad-50-000-pln-ktora-marka-wystepuje-najczesciej-w-zbiorze-danych-auta2012}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Cena.w.PLN, Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Cena.w.PLN, Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Cena.w.PLN}\OperatorTok{>}\DecValTok{50000}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba}\OperatorTok{==}\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   Marka liczba
+##   <fct>  <int>
+## 1 Audi    4374
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{13. Spo?r?d aut marki Toyota, kt?ry model ma najwi?kszy
+medianowy
+przebieg?}\label{spord-aut-marki-toyota-ktry-model-ma-najwikszy-medianowy-przebieg}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Marka }\OperatorTok{==}\StringTok{ "Toyota"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Model, Rodzaj.paliwa) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{Mediana_przebiegu =} \KeywordTok{median}\NormalTok{(Przebieg.w.km, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(Mediana_przebiegu))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 97 x 3
+## # Groups:   Model [40]
+##    Model   Rodzaj.paliwa          Mediana_przebiegu
+##    <fct>   <fct>                              <dbl>
+##  1 Carina  benzyna+LPG                       271000
+##  2 Avalon  benzyna+LPG                       250000
+##  3 Previa  benzyna+LPG                       249000
+##  4 Carina  olej napedowy (diesel)            211000
+##  5 Previa  benzyna                           207000
+##  6 Camry   benzyna+LPG                       203000
+##  7 Carina  benzyna                           199800
+##  8 Previa  olej napedowy (diesel)            196924
+##  9 Avensis benzyna+LPG                       196000
+## 10 Celica  benzyna+LPG                       195000
+## # ... with 87 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{14. Spo?r?d aut z silnikiem diesla wyprodukowanych w 2007
+roku kt?ry model jest
+najdro?szy?}\label{spord-aut-z-silnikiem-diesla-wyprodukowanych-w-2007-roku-ktry-model-jest-najdroszy}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji}\OperatorTok{==}\DecValTok{2007}\NormalTok{, Rodzaj.paliwa}\OperatorTok{==}\StringTok{"olej napedowy (diesel)"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka,Model) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{max}\NormalTok{(Cena.w.PLN)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 315 x 3
+## # Groups:   Marka [44]
+##    Marka         Model    liczba
+##    <fct>         <fct>     <dbl>
+##  1 Volvo         inny    505745.
+##  2 Mercedes-Benz G 320   287092 
+##  3 Mercedes-Benz S 320   259900 
+##  4 Mercedes-Benz GL 420  250000 
+##  5 Mercedes-Benz CLS 320 235000 
+##  6 Audi          Q7      216865.
+##  7 Mercedes-Benz S 420   215000 
+##  8 Mercedes-Benz GL 320  205000 
+##  9 Audi          A8      199000 
+## 10 BMW           X5      195717.
+## # ... with 305 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{15. W jakim modelu klimatyzacja jest najcz??ciej
+obecna?}\label{w-jakim-modelu-klimatyzacja-jest-najczciej-obecna}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Model, Wyposazenie.dodatkowe) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Wyposazenie.dodatkowe}\OperatorTok{==}\StringTok{"klimatyzacja"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Model) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba}\OperatorTok{==}\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   Model liczba
+##   <fct>  <int>
+## 1 Clio       8
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{16. Gdy ograniczy? si? tylko do aut o przebiegu poni?ej
+50 000 km o silniku diesla, kt?ra Marka wyst?puje najcz??ciej w zbiorze
+danych
+auta2012?}\label{gdy-ograniczy-si-tylko-do-aut-o-przebiegu-poniej-50-000-km-o-silniku-diesla-ktra-marka-wystpuje-najczciej-w-zbiorze-danych-auta2012}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Przebieg.w.km, Marka,Rodzaj.paliwa) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Przebieg.w.km}\OperatorTok{<}\DecValTok{50000}\NormalTok{,Rodzaj.paliwa}\OperatorTok{==}\StringTok{"olej napedowy (diesel)"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Marka)}\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{liczba =} \KeywordTok{n}\NormalTok{()) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(liczba}\OperatorTok{==}\KeywordTok{max}\NormalTok{(liczba))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   Marka liczba
+##   <fct>  <int>
+## 1 BMW     1217
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{17. Spo?r?d aut marki Toyota wyprodukowanych w 2007 roku,
+kt?ry model jest ?rednio
+najdro?szy?}\label{spord-aut-marki-toyota-wyprodukowanych-w-2007-roku-ktry-model-jest-rednio-najdroszy}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji}\OperatorTok{==}\DecValTok{2007}\NormalTok{, Marka}\OperatorTok{==}\StringTok{"Toyota"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Model) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{Srednia_cena =} \KeywordTok{mean}\NormalTok{(Cena.w.PLN, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(Srednia_cena))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 20 x 2
+##    Model         Srednia_cena
+##    <fct>                <dbl>
+##  1 Land Cruiser       101566.
+##  2 Tundra              81901.
+##  3 FJ                  75802.
+##  4 Highlander          69900 
+##  5 Avalon              69400 
+##  6 Sienna              65350.
+##  7 RAV-4               61062.
+##  8 Camry               57711.
+##  9 Hiace               49900 
+## 10 Prius               45499.
+## 11 Matrix              45000 
+## 12 Hilux               44424.
+## 13 Corolla Verso       41487.
+## 14 Avensis             40713.
+## 15 Auris               33390.
+## 16 Corolla             30762.
+## 17 Avensis Verso       29517.
+## 18 Yaris               23189.
+## 19 Aygo                17018.
+## 20 inny                 5200
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{18. Spo?r?d aut z silnikiem diesla wyprodukowanych w 2007
+roku kt?ry model jest
+najta?szy?}\label{spord-aut-z-silnikiem-diesla-wyprodukowanych-w-2007-roku-ktry-model-jest-najtaszy}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Model, Cena.w.PLN, Rodzaj.paliwa, Rok.produkcji) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Rok.produkcji}\OperatorTok{==}\DecValTok{2007}\NormalTok{, Rodzaj.paliwa}\OperatorTok{==}\StringTok{"olej napedowy (diesel)"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Model) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(Cena.w.PLN)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 11,621 x 4
+## # Groups:   Model [301]
+##    Model    Cena.w.PLN Rodzaj.paliwa          Rok.produkcji
+##    <fct>         <dbl> <fct>                          <dbl>
+##  1 Octavia         562 olej napedowy (diesel)          2007
+##  2 Octavia         600 olej napedowy (diesel)          2007
+##  3 Leon            700 olej napedowy (diesel)          2007
+##  4 Accord          999 olej napedowy (diesel)          2007
+##  5 Eos             999 olej napedowy (diesel)          2007
+##  6 Navara         1100 olej napedowy (diesel)          2007
+##  7 Berlingo       1350 olej napedowy (diesel)          2007
+##  8 Partner        1500 olej napedowy (diesel)          2007
+##  9 Berlingo       1550 olej napedowy (diesel)          2007
+## 10 C-MAX          1600 olej napedowy (diesel)          2007
+## # ... with 11,611 more rows
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\subsubsection{19. Jakiego koloru auta maj? najwi?kszy medianowy
+przebieg?}\label{jakiego-koloru-auta-maj-najwikszy-medianowy-przebieg}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{auta2012 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(Kolor,Przebieg.w.km) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(Kolor) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{Przebiegg =} \KeywordTok{median}\NormalTok{(Przebieg.w.km, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(Przebiegg))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 37 x 2
+##    Kolor              Przebiegg
+##    <fct>                  <dbl>
+##  1 bordowy               175500
+##  2 granatowy-metallic    167000
+##  3 zielony-metallic      166000
+##  4 zielony               164000
+##  5 fioletowy-metallic    163000
+##  6 granatowy             161000
+##  7 fioletowy             157000
+##  8 rozowy                157000
+##  9 bordowy-metallic      150000
+## 10 srebrny-metallic      145000
+## # ... with 27 more rows
+\end{verbatim}
+
+
+\end{document}

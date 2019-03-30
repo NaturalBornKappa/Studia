@@ -3,8 +3,8 @@ title: "Stata"
 author: "Jakub Bauer"
 numer_albumu: "99029"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{R,  include=FALSE}
@@ -120,7 +120,7 @@ auta2012 %>%
 ### 9. Sposrod aut marki Toyota, ktory model ma najwieksza ro?nice cen gdy porownac silniki benzynowe a diesel?
 
 W tym zadaniu niestety potrafie wyfiltrowa? sobie tylko Toyoty w diesel'u i w benzynie. Nie mam pomyslu jak zrobic funkcie ktra by brala max cene dal jednego radzju paliwa i drugiego dla danego modelu i por?wnywla do siebie.
-``` {r, echo=FLASE}
+``` {r, include=FALSE}
 auta2012 %>%
   select(Marka,Model, Rodzaj.paliwa, Cena.w.PLN) %>%
   filter(Marka =="Toyota") %>%
