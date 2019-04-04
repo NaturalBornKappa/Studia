@@ -11,5 +11,6 @@ Konwencja nazewnictwa: *nr.albumu*_AiSD*numer.labek*
 (PPI)
 Konwencja nazewnictwa: *nr.albumu*_PPI_*nrumer.labek*_*numer.zadania*
                     eg. 99029_PPI_1_1
+
 ---
-PO - Programowanie Obiektowe | AiSD - Algorytmy i Struktury Danych | PPI - Projekt Programistyczny Indywidualny
+_PO - Programowanie Obiektowe | AiSD - Algorytmy i Struktury Danych | PPI - Projekt Programistyczny Indywidualny_
