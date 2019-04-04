@@ -1,0 +1,2 @@
+obj=data.frame(f=c("\\","sinus","cosinus","tangens","cotangens"),k30=c(30,1/2,sqrt(3)/2,sqrt(3)/3,sqrt(3)),k45=c(45,sqrt(2)/2,sqrt(2)/2,1,1),k60=c(60,sqrt(3)/2,1/2,sqrt(3),sqrt(3)/3),k90=c(90,1,0,NA,0))
+obj
