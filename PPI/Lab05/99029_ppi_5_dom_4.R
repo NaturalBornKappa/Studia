@@ -1,0 +1,5 @@
+x <- c(1:10, rep(0, 10), seq(20, 58, 2), 7:16)
+x <- c(x, rev(x))
+palindrom <- function(x)
+  all(x == rev(x))
+palindrom(x)
