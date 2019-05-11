@@ -1,0 +1,5 @@
+klienci <- read.csv2("klienci.csv")
+wiek.kat <- cut(klienci$wiek, c(18, seq(30, 100, by=10)), right=FALSE)
+table(wiek.kat)
+tab <- table(wiek.kat, klienci$plec)
+addmargins(tab)
