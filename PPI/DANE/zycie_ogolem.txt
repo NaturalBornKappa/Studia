@@ -1,0 +1,2 @@
+"Trwanie_¿ycia" "Województwa" "Mê¿czyŸni" "Kobiety"
+"1" "miasta i wies" "Ogó³em miasta i wies" "71.5" "80.1"

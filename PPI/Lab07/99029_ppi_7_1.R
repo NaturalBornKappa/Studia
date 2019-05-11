@@ -1,0 +1,5 @@
+dir.create("D:/GitHub/Studia/PPI/DANE")
+setwd("D:/GitHub/Studia/PPI/DANE")
+file.create("dane.txt")
+file.create("dane.csv")
+dir()
