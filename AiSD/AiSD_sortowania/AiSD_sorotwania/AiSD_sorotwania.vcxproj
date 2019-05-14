@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -117,12 +120,16 @@
   <ItemGroup>
     <ClCompile Include="bubblesort.cpp" />
     <ClCompile Include="countsort.cpp" />
+    <ClCompile Include="insertsort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="max.cpp" />
+    <ClCompile Include="mergesort.cpp" />
     <ClCompile Include="quicksort.cpp" />
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="uzycie_bubblesort.cpp" />
     <ClCompile Include="uzycie_countsort.cpp" />
+    <ClCompile Include="uzycie_insertsort.cpp" />
+    <ClCompile Include="uzycie_mergesort.cpp" />
     <ClCompile Include="uzycie_quicksort.cpp" />
     <ClCompile Include="wyswietl.cpp" />
   </ItemGroup>
@@ -130,11 +137,15 @@
     <ClInclude Include="biblioteki.h" />
     <ClInclude Include="bubblesort.h" />
     <ClInclude Include="countsort.h" />
+    <ClInclude Include="insertsort.h" />
     <ClInclude Include="max.h" />
+    <ClInclude Include="mergesort.h" />
     <ClInclude Include="quicksort.h" />
     <ClInclude Include="swap.h" />
     <ClInclude Include="uzycie_bubblesort.h" />
     <ClInclude Include="uzycie_countsort.h" />
+    <ClInclude Include="uzycie_insertsort.h" />
+    <ClInclude Include="uzycie_mergesort.h" />
     <ClInclude Include="uzycie_quicksort.h" />
     <ClInclude Include="wyswietl.h" />
   </ItemGroup>

@@ -13,6 +13,10 @@
 #include"uzycie_countsort.h"
 #include"bubblesort.h"
 #include"uzycie_bubblesort.h"
+//#include"mergesort.h"
+//#include"uzycie_mergesort.h"
+#include"insertsort.h"
+#include"uzycie_insertsort.h"
 
 
 using std::cout;
