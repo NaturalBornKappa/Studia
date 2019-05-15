@@ -125,12 +125,14 @@
     <ClCompile Include="max.cpp" />
     <ClCompile Include="mergesort.cpp" />
     <ClCompile Include="quicksort.cpp" />
+    <ClCompile Include="selectionsortcpp.cpp" />
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="uzycie_bubblesort.cpp" />
     <ClCompile Include="uzycie_countsort.cpp" />
     <ClCompile Include="uzycie_insertsort.cpp" />
     <ClCompile Include="uzycie_mergesort.cpp" />
     <ClCompile Include="uzycie_quicksort.cpp" />
+    <ClCompile Include="uzycie_selectionsortcpp.cpp" />
     <ClCompile Include="wyswietl.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,12 +143,14 @@
     <ClInclude Include="max.h" />
     <ClInclude Include="mergesort.h" />
     <ClInclude Include="quicksort.h" />
+    <ClInclude Include="selectionsort.h" />
     <ClInclude Include="swap.h" />
     <ClInclude Include="uzycie_bubblesort.h" />
     <ClInclude Include="uzycie_countsort.h" />
     <ClInclude Include="uzycie_insertsort.h" />
     <ClInclude Include="uzycie_mergesort.h" />
     <ClInclude Include="uzycie_quicksort.h" />
+    <ClInclude Include="uzycie_selectionsort.h" />
     <ClInclude Include="wyswietl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -9,7 +9,7 @@ int main() {
 	uzycie_quicksort(quick9, 9);
 	uzycie_quicksort(quick0, 6);
 
-	/* COUNT SORT */ /*nie dzia³a dla ujemnych*/
+	/* COUNT SORT */ /*nie dziaÂ³a dla ujemnych*/
 	int count7[] = { 7,6,5,4,3,2,1 };
 	int count9[] = { 7,4,2,5,2,6,0,9,2 };
 	//int count0[] = { 2,0,-6,-3,425,9 };
@@ -41,6 +41,14 @@ int main() {
 	uzycie_insertsort(insert9, 9);
 	uzycie_insertsort(insert0, 6);
 
+
+	/* SELECTION SORT */
+	int selection7[] = { 7,6,5,4,3,2,1 };
+	int selection9[] = { 7,4,2,5,2,6,0,9,2 };
+	int selection0[] = { 2,0,-6,-3,425,9 };
+	uzycie_selectionsort(selection7, 7);
+	uzycie_selectionsort(selection9, 9);
+	uzycie_selectionsort(selection0, 6);
 
 	//system("PAUSE");
 	return 0;

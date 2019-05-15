@@ -17,6 +17,8 @@
 //#include"uzycie_mergesort.h"
 #include"insertsort.h"
 #include"uzycie_insertsort.h"
+#include"selectionsort.h"
+#include"uzycie_selectionsort.h"
 
 
 using std::cout;
