@@ -11,4 +11,6 @@ void insertsort(int* _data, int _lenght) {
 
 	for (i = 0; i < _lenght; i++)
 		_data[i] = temp[i];	
+
+	delete[] temp;
 }

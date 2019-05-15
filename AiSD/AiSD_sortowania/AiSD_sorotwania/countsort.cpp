@@ -24,5 +24,5 @@ void countsort(int *_data, unsigned int _size) {
 		for (; sorted[index]; --sorted[index])
 			_data[pozycja++] = static_cast<int>(index);
 	}
-	delete sorted;
+	delete[] sorted;
 }
