@@ -9,3 +9,13 @@ int find_max(int * _data, int _size) {
 	}
 	return max;
 }
+
+void wyrzuc_max(int * _data, int _size, int _max) {
+	for (int i = 0; i < _size; i++)
+	{
+		if (_max == _data[i]) {
+			_data[i] = INT_MIN;
+			break;
+		}
+	}
+}

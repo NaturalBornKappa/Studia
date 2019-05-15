@@ -45,6 +45,24 @@
     <ClCompile Include="uzycie_bubblesort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mergesort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uzycie_mergesort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="insertsort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uzycie_insertsort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="selectionsortcpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uzycie_selectionsortcpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="biblioteki.h">
@@ -75,6 +93,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="bubblesort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uzycie_mergesort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="insertsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uzycie_insertsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="selectionsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uzycie_selectionsort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
