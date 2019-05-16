@@ -13,123 +13,123 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Algorytmy sortowania">
-      <UniqueIdentifier>{fb68f4c4-fa36-4f88-9fd1-f052f8c8519d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Przypadki użycia">
-      <UniqueIdentifier>{9a8c2b17-d863-436a-8661-6d8dc4c8ebde}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Funkcje">
-      <UniqueIdentifier>{baa52e22-656e-4d8f-97b8-3cd9c6a133ff}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Algorytmy sortowania">
-      <UniqueIdentifier>{57ae37ab-ac1d-41fc-81b3-ad7a786d0ecc}</UniqueIdentifier>
+      <UniqueIdentifier>{b6bb8687-06d2-48ef-bf99-e4a0fbdc17ac}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Przypadki użycia">
-      <UniqueIdentifier>{be96022a-d497-4e8e-ad03-86ee4177b3f2}</UniqueIdentifier>
+      <UniqueIdentifier>{f82c3d85-c88e-46c7-a48c-1ec0bd24051a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Filter">
-      <UniqueIdentifier>{42019103-c78a-4815-ba0f-75999fc91cb6}</UniqueIdentifier>
+    <Filter Include="Source Files\Funkcje">
+      <UniqueIdentifier>{38d93863-fb67-400d-8111-9b2c515e3fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Algorytmy sortowania">
+      <UniqueIdentifier>{38fd0906-9175-4950-a7d9-07ddc5a2ecac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Przypadki użycia">
+      <UniqueIdentifier>{fdf5eea9-c4c3-4639-8dd6-109a50f870e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Funkcje">
+      <UniqueIdentifier>{fac11811-01b5-4170-9ad9-b34841f70584}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\AiSD_sorotwania\biblioteki.h">
+    <ClInclude Include="biblioteki.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\bubblesort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\countsort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\insertsort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\mergesort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\quicksort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\selectionsort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\uzycie_selectionsort.h">
+    <ClInclude Include="uzycie_selectionsort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\uzycie_bubblesort.h">
+    <ClInclude Include="uzycie_bubblesort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\uzycie_countsort.h">
+    <ClInclude Include="uzycie_countsort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\uzycie_insertsort.h">
+    <ClInclude Include="uzycie_insertsort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\uzycie_mergesort.h">
+    <ClInclude Include="uzycie_mergesort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\uzycie_quicksort.h">
+    <ClInclude Include="uzycie_quicksort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\swap.h">
+    <ClInclude Include="bubblesort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="countsort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="insertsort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="quicksort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="selectionsort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="wyswietl.h">
       <Filter>Header Files\Funkcje</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\max.h">
+    <ClInclude Include="max.h">
       <Filter>Header Files\Funkcje</Filter>
     </ClInclude>
-    <ClInclude Include="..\AiSD_sorotwania\wyswietl.h">
+    <ClInclude Include="swap.h">
       <Filter>Header Files\Funkcje</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\AiSD_sorotwania\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\bubblesort.cpp">
+    <ClCompile Include="bubblesort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\countsort.cpp">
+    <ClCompile Include="countsort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\insertsort.cpp">
+    <ClCompile Include="insertsort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\mergesort.cpp">
+    <ClCompile Include="mergesort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\quicksort.cpp">
+    <ClCompile Include="quicksort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\selectionsortcpp.cpp">
+    <ClCompile Include="selectionsortcpp.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\uzycie_bubblesort.cpp">
+    <ClCompile Include="uzycie_selectionsortcpp.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\uzycie_countsort.cpp">
+    <ClCompile Include="uzycie_bubblesort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\uzycie_insertsort.cpp">
+    <ClCompile Include="uzycie_countsort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\uzycie_mergesort.cpp">
+    <ClCompile Include="uzycie_insertsort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\uzycie_quicksort.cpp">
+    <ClCompile Include="uzycie_mergesort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\uzycie_selectionsortcpp.cpp">
+    <ClCompile Include="uzycie_quicksort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\max.cpp">
-      <Filter>Source Files\Filter</Filter>
+    <ClCompile Include="max.cpp">
+      <Filter>Source Files\Funkcje</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\swap.cpp">
-      <Filter>Source Files\Filter</Filter>
+    <ClCompile Include="swap.cpp">
+      <Filter>Source Files\Funkcje</Filter>
     </ClCompile>
-    <ClCompile Include="..\AiSD_sorotwania\wyswietl.cpp">
-      <Filter>Source Files\Filter</Filter>
+    <ClCompile Include="wyswietl.cpp">
+      <Filter>Source Files\Funkcje</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

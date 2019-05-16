@@ -49,6 +49,6 @@ int main() {
 	uzycie_selectionsort(selection9, 9);
 	uzycie_selectionsort(selection0, 6);
 
-	//system("PAUSE");
+	system("PAUSE");
 	return 0;
 }
