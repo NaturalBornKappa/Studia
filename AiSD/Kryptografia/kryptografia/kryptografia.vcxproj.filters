@@ -18,5 +18,22 @@
     <ClInclude Include="biblioteki.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="wybor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="szyfr_msp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wybor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="szyfr_msp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
