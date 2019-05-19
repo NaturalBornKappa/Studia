@@ -1,0 +1,5 @@
+w1 <- polynomial(c(27, 27, 9, 1))
+w2 <- polynomial(c(9, 6, 1))
+w3 <- polynomial(c(-9, 0, 1))
+w4 <- polynomial(c(-81, 0, 0, 0, 1))
+LCM(w1, w2, w3, w4)
