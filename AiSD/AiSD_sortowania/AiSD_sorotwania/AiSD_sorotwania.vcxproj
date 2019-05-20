@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{8F86C175-B155-4223-8822-D1B759E07727}</ProjectGuid>
-    <RootNamespace>kryptografia</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{B9C848E9-F5B4-4C61-AE34-551D012E5D3E}</ProjectGuid>
+    <RootNamespace>AiSDsorotwania</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -85,9 +88,6 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -118,14 +118,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="biblioteki.h" />
-    <ClInclude Include="szyfr_msp.h" />
-    <ClInclude Include="wybor.h" />
+    <ClCompile Include="bubblesort.cpp" />
+    <ClCompile Include="countsort.cpp" />
+    <ClCompile Include="insertsort.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="max.cpp" />
+    <ClCompile Include="mergesort.cpp" />
+    <ClCompile Include="quicksort.cpp" />
+    <ClCompile Include="selectionsort.cpp" />
+    <ClCompile Include="swap.cpp" />
+    <ClCompile Include="uzycie_bubblesort.cpp" />
+    <ClCompile Include="uzycie_countsort.cpp" />
+    <ClCompile Include="uzycie_insertsort.cpp" />
+    <ClCompile Include="uzycie_mergesort.cpp" />
+    <ClCompile Include="uzycie_quicksort.cpp" />
+    <ClCompile Include="uzycie_selectionsort.cpp" />
+    <ClCompile Include="wyswietl.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="szyfr_msp.cpp" />
-    <ClCompile Include="wybor.cpp" />
+    <ClInclude Include="biblioteki.h" />
+    <ClInclude Include="bubblesort.h" />
+    <ClInclude Include="countsort.h" />
+    <ClInclude Include="insertsort.h" />
+    <ClInclude Include="max.h" />
+    <ClInclude Include="mergesort.h" />
+    <ClInclude Include="quicksort.h" />
+    <ClInclude Include="selectionsort.h" />
+    <ClInclude Include="swap.h" />
+    <ClInclude Include="uzycie_bubblesort.h" />
+    <ClInclude Include="uzycie_countsort.h" />
+    <ClInclude Include="uzycie_insertsort.h" />
+    <ClInclude Include="uzycie_mergesort.h" />
+    <ClInclude Include="uzycie_quicksort.h" />
+    <ClInclude Include="uzycie_selectionsort.h" />
+    <ClInclude Include="wyswietl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

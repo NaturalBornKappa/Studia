@@ -1,0 +1,6 @@
+x <- sample(1:6, 100, rep=TRUE)
+barplot(table(x), col=heat.colors(6))
+barplot(table(x), col=terrain.colors(6))
+barplot(table(x), col=topo.colors(6))
+barplot(table(x), col=cm.colors(6))
+barplot(table(x), col=grey(seq(0, 1, len=6)))
