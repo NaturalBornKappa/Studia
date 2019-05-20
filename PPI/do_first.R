@@ -1,8 +1,6 @@
 dir.create("D:/GitHub/Studia/PPI/DANE")
 setwd("D:/GitHub/Studia/PPI/DANE")
 
-library("polynom")
-
 install.packages("dplyr")
 install.packages("devtools")
 install.packages("polynom")
@@ -11,3 +9,10 @@ install.packages("stats")
 install.packages("psych")
 install.packages("e1071'")
 install.packages("dprep'")
+install.packages("BSDA")
+install.packages("plotrix")
+
+library("polynom")
+library("e1071")
+library("BSDA")
+library("plotrix)

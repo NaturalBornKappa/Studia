@@ -1,0 +1,7 @@
+curve(x^2, -5, 5, col="red", ylim=c(-5, 5))
+curve(-x^2, -5, 5, col="green", add=TRUE)
+curve((x-3)^2+2, -5, 5, col="blue", add=TRUE)
+curve((x-3)^2-4, -5, 5, col="grey", add=TRUE)
+abline(h=0, lty=2)
+abline(v=0, lty=2)
+legend(-5, 3, c("x^2", "-x^2", "(x-3)^2+2", "(x-3)^2-4"), lty=1, col=c("red", "green", "blue", "grey"))
