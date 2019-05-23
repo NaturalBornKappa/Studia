@@ -7,11 +7,12 @@ void szyfruj() {
 
 	cout << "Podaj teskt do zakodowania: ";
 	cin >> jawne;
-	cout << endl;
 
 	cout << "Podaj nieujemna wartosc przesuniecia: ";
 	cin >> x;
 	cout << endl;
+
+	nazwy_szyfrow(x);
 
 	while (1) {
 		if (x > 26)
@@ -35,7 +36,6 @@ void szyfruj() {
 				jawne[i] = (jawne[i] - 26);
 			/* A¯ DO T¥D*/
 		}
-		else if (jawne[i] > 122)
 	}
 	cout << jawne << endl << endl;
 }
@@ -47,11 +47,12 @@ void deszyfruj() {
 
 	cout << "Podaj teskt do odkodowania: ";
 	cin >> tajne;
-	cout << endl;
 
 	cout << "Podaj nieujemna wartosc przesuniecia: ";
 	cin >> x;
 	cout << endl;
+
+	nazwy_szyfrow(x);
 
 	while (1) {
 		if (x > 26)
@@ -90,5 +91,6 @@ void szyfr_msp() {
 	else if (w == 2) {
 		deszyfruj();
 	}
+
 	szyfr_msp();
 }

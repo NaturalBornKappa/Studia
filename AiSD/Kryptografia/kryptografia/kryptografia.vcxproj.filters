@@ -24,6 +24,9 @@
     <ClInclude Include="szyfr_msp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="nazwy_szyfrow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="szyfr_msp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nazwy_szyfrow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
