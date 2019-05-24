@@ -13,31 +13,52 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Algorytmy sortowania">
-      <UniqueIdentifier>{b6bb8687-06d2-48ef-bf99-e4a0fbdc17ac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Przypadki użycia">
-      <UniqueIdentifier>{f82c3d85-c88e-46c7-a48c-1ec0bd24051a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Funkcje">
-      <UniqueIdentifier>{38d93863-fb67-400d-8111-9b2c515e3fbf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Algorytmy sortowania">
-      <UniqueIdentifier>{38fd0906-9175-4950-a7d9-07ddc5a2ecac}</UniqueIdentifier>
+      <UniqueIdentifier>{487f7646-638e-4b37-af0f-53e3018d5d67}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Przypadki użycia">
-      <UniqueIdentifier>{fdf5eea9-c4c3-4639-8dd6-109a50f870e4}</UniqueIdentifier>
+      <UniqueIdentifier>{4474164e-07a0-4e40-ad59-1e30e128584c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Funkcje">
-      <UniqueIdentifier>{fac11811-01b5-4170-9ad9-b34841f70584}</UniqueIdentifier>
+    <Filter Include="Header Files\Funckje">
+      <UniqueIdentifier>{cf6c53fc-3d19-499d-bbbe-f9c46dee4575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Algorytmy sortowania">
+      <UniqueIdentifier>{34b13e9a-165a-4815-9f59-35bc96e02a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Funkcje">
+      <UniqueIdentifier>{0394f30e-2373-4c75-9c8b-d301017c4db0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Przypadki użycia">
+      <UniqueIdentifier>{2dd28437-665d-43c9-8761-e0291ddb3cd6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="biblioteki.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="countsort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
     </ClInclude>
-    <ClInclude Include="uzycie_selectionsort.h">
-      <Filter>Header Files\Przypadki użycia</Filter>
+    <ClInclude Include="insertsort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="quicksort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="selectionsort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="bubblesort.h">
+      <Filter>Header Files\Algorytmy sortowania</Filter>
+    </ClInclude>
+    <ClInclude Include="swap.h">
+      <Filter>Header Files\Funckje</Filter>
+    </ClInclude>
+    <ClInclude Include="wyswietl.h">
+      <Filter>Header Files\Funckje</Filter>
+    </ClInclude>
+    <ClInclude Include="max.h">
+      <Filter>Header Files\Funckje</Filter>
     </ClInclude>
     <ClInclude Include="uzycie_bubblesort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
@@ -54,41 +75,14 @@
     <ClInclude Include="uzycie_quicksort.h">
       <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="bubblesort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
+    <ClInclude Include="uzycie_selectionsort.h">
+      <Filter>Header Files\Przypadki użycia</Filter>
     </ClInclude>
-    <ClInclude Include="countsort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="insertsort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="mergesort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="quicksort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="selectionsort.h">
-      <Filter>Header Files\Algorytmy sortowania</Filter>
-    </ClInclude>
-    <ClInclude Include="wyswietl.h">
-      <Filter>Header Files\Funkcje</Filter>
-    </ClInclude>
-    <ClInclude Include="max.h">
-      <Filter>Header Files\Funkcje</Filter>
-    </ClInclude>
-    <ClInclude Include="swap.h">
-      <Filter>Header Files\Funkcje</Filter>
+    <ClInclude Include="biblioteki.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bubblesort.cpp">
-      <Filter>Source Files\Algorytmy sortowania</Filter>
-    </ClCompile>
     <ClCompile Include="countsort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
@@ -101,17 +95,23 @@
     <ClCompile Include="quicksort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="selectionsortcpp.cpp">
+    <ClCompile Include="selectionsort.cpp">
       <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="uzycie_selectionsortcpp.cpp">
-      <Filter>Source Files\Przypadki użycia</Filter>
+    <ClCompile Include="bubblesort.cpp">
+      <Filter>Source Files\Algorytmy sortowania</Filter>
     </ClCompile>
-    <ClCompile Include="uzycie_bubblesort.cpp">
-      <Filter>Source Files\Przypadki użycia</Filter>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="uzycie_countsort.cpp">
-      <Filter>Source Files\Przypadki użycia</Filter>
+    <ClCompile Include="max.cpp">
+      <Filter>Source Files\Funkcje</Filter>
+    </ClCompile>
+    <ClCompile Include="swap.cpp">
+      <Filter>Source Files\Funkcje</Filter>
+    </ClCompile>
+    <ClCompile Include="wyswietl.cpp">
+      <Filter>Source Files\Funkcje</Filter>
     </ClCompile>
     <ClCompile Include="uzycie_insertsort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
@@ -122,14 +122,14 @@
     <ClCompile Include="uzycie_quicksort.cpp">
       <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="max.cpp">
-      <Filter>Source Files\Funkcje</Filter>
+    <ClCompile Include="uzycie_selectionsort.cpp">
+      <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="swap.cpp">
-      <Filter>Source Files\Funkcje</Filter>
+    <ClCompile Include="uzycie_bubblesort.cpp">
+      <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
-    <ClCompile Include="wyswietl.cpp">
-      <Filter>Source Files\Funkcje</Filter>
+    <ClCompile Include="uzycie_countsort.cpp">
+      <Filter>Source Files\Przypadki użycia</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
