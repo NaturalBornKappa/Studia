@@ -3,10 +3,9 @@
 #include <string>
 
 #include"wybor.h"
+#include"nazwy_szyfrow.h"
 
 #include"szyfr_msp.h"
-
-#define CEZAR 3;
 
 using std::cout;
 using std::cin;
