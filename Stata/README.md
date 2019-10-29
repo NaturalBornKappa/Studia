@@ -1,3 +1,5 @@
+Tutaj znajdują się zadania na laboratioria z przedmiotu pod nazwą *Statystyka*.
+
 W pliku ```stata_conf.R``` znajduja sie wszystkie komendy potrzebne do instalacji pakietow oraz inicjalizacji bibliotek, niezbednych do działania plikow z obydwu zadan ```Stata1``` i ```Stata3```.
  - W folderze ```Stata1``` znajduje sie:
 	- ```stata.R``` - plik z rozwiązaniami zadań w R
