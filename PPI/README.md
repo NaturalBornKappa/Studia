@@ -1,3 +1,2 @@
-Tutaj znajdują się zadania na laboratioria z *Projektu Programistycznego Indywidualnego*.
-Podzielone zostały one na foldery odpowiadajace kolejnym laboratorium.
-w środku znajduja sie pliki z rozwiązaniami zadań.
+Tutaj znajdują się zadania na laboratioria z przedmiotu pod nazwą *Projektu Programistycznego Indywidualnego*.
+Podzielone zostały one na foldery odpowiadajace kolejnym laboratorium, w środku którcyh znajduja sie pliki z rozwiązaniami zadań.

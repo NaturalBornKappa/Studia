@@ -1,0 +1,1 @@
+Tutaj znajdują się zadania na laboratioria z przedmiotu pod nazwą *Współczesne Metody Przetwarzania Danych*.

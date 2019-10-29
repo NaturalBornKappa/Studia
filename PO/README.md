@@ -1,0 +1,1 @@
+Tutaj znajdują sie programy napisane w *C++* na zaliczenie laboratoriów z przedmiotu *Programowanie Obiektowe w C++*.
