@@ -1,6 +1,6 @@
 Repozytorium, w którym wrzucam kody programów z labek.
 
- (PO)
+(PO)
 Konwencja nazewnictwa: *lab.ID_nr.albumu_zad.ID_STATUS*
                    eg. lab00_99029_zad01_DONE
                    
@@ -23,5 +23,19 @@ Konwencja nazewnictwa: TBD
 (Sieci)
 Wrzucone są tylko pliki z programu Cisco Packet Tracer - bez opisów i skryptów.
 
+(PWJ)
+Konwencja nazewnictwa: TBD
+                    eg.
+
+(BiEZI)
+Konwencja nazewnictwa: TBD
+                    eg.
+
+(WMPD)
+Konwencja nazewnictwa: TBD
+                    eg.
+
 ---
 _PO - Programowanie Obiektowe | AiSD - Algorytmy i Struktury Danych | PPI - Projekt Programistyczny Indywidualny_
+_BiEZI - Biznesowe i Ekonomiczne Zastosowania Inforamtyki | WMPD - Współczesne Metody Przetwarzania Danych_
+_Stata - Statystyka | Sieci - Sieci Komputerowe | PWJ - Programowanie w JAVA'ie _
