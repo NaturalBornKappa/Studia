@@ -12,7 +12,7 @@ Konwencja nazewnictwa: *nr.albumu_AiSDnumer.labek*
 Konwencja nazewnictwa: *nr.albumu_PPI_numer.labek_numer.zadania*
                     eg. 99029_PPI_1_1
                     
-(Bazy Danych)
+(BD)
 Konwencja nazewnictwa: TBD
                     eg.
 
@@ -38,4 +38,4 @@ Konwencja nazewnictwa: TBD
 ---
 _PO - Programowanie Obiektowe | AiSD - Algorytmy i Struktury Danych | PPI - Projekt Programistyczny Indywidualny_
 _BiEZI - Biznesowe i Ekonomiczne Zastosowania Inforamtyki | WMPD - Współczesne Metody Przetwarzania Danych_
-_Stata - Statystyka | Sieci - Sieci Komputerowe | PWJ - Programowanie w JAVA'ie _
+_Stata - Statystyka | Sieci - Sieci Komputerowe | PWJ - Programowanie w JAVA'ie | BD -Bazy Danych |
