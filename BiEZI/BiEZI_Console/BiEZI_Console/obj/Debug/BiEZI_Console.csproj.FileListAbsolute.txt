@@ -1,0 +1,6 @@
+c:\users\99029\documents\visual studio 2013\Projects\BiEZI_Console\BiEZI_Console\bin\Debug\BiEZI_Console.exe.config
+c:\users\99029\documents\visual studio 2013\Projects\BiEZI_Console\BiEZI_Console\bin\Debug\BiEZI_Console.exe
+c:\users\99029\documents\visual studio 2013\Projects\BiEZI_Console\BiEZI_Console\bin\Debug\BiEZI_Console.pdb
+c:\users\99029\documents\visual studio 2013\Projects\BiEZI_Console\BiEZI_Console\obj\Debug\BiEZI_Console.csprojResolveAssemblyReference.cache
+c:\users\99029\documents\visual studio 2013\Projects\BiEZI_Console\BiEZI_Console\obj\Debug\BiEZI_Console.exe
+c:\users\99029\documents\visual studio 2013\Projects\BiEZI_Console\BiEZI_Console\obj\Debug\BiEZI_Console.pdb
