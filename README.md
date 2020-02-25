@@ -1,6 +1,6 @@
 Repozytorium, w którym wrzucam kody programów z labek.
 
-(PO)
+(POC++)
 Konwencja nazewnictwa: *lab.ID_nr.albumu_zad.ID_STATUS*
                    eg. lab00_99029_zad01_DONE
                    
@@ -36,6 +36,7 @@ Konwencja nazewnictwa: TBD
                     eg.
 
 ---
-_PO - Programowanie Obiektowe | AiSD - Algorytmy i Struktury Danych | PPI - Projekt Programistyczny Indywidualny_
-_BiEZI - Biznesowe i Ekonomiczne Zastosowania Inforamtyki | WMPD - Współczesne Metody Przetwarzania Danych_
-_Stata - Statystyka | Sieci - Sieci Komputerowe | PWJ - Programowanie w JAVA'ie | BD -Bazy Danych |
+_POC++ - Programowanie Obiektowe | AiSD - Algorytmy i Struktury Danych | PPI - Projekt Programistyczny Indywidualny |_
+_BiEZI - Biznesowe i Ekonomiczne Zastosowania Inforamtyki | WMPD - Współczesne Metody Przetwarzania Danych |_
+_Stata - Statystyka | Sieci - Sieci Komputerowe | PWJ - Programowanie w JAVA'ie | BD -Bazy Danych | PO - Przetwarzanie Obrazów |_
+_SMiB - Sieci Mobilne i Bezprzewodowe | NiMSI - Narzędzie i Metody Sztucznej Inteligencji | GK - Grafika Komputerowa |_
