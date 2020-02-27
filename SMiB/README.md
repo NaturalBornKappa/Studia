@@ -1,0 +1,1 @@
+Tutaj znajdują sie pliki projektu na zaliczenie przedmiotu *Przetwarzanie Obrazów*
