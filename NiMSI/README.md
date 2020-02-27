@@ -1,0 +1,1 @@
+Tutaj znajduja sie pliki na zaliczenie z przedmiotu *Narzędzia i Metody Sztucznej Inteligencji*.
